@@ -1,12 +1,15 @@
-<!-- login.html -->
+<!-- resources/views/auth/login.blade.php -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login</title>
+  <link rel="stylesheet" href="/Pages/styles.css"/>
+  
   <style>
-    * {
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -101,27 +104,31 @@
   .button-link:hover {
     background-color: #5428b9;
   }
-  
+
   </style>
-  <link rel="stylesheet" href="/Pages/styles.css"/>
+
 </head>
 <body class="container">
   <div class="login-box">
     <h1>FAÇA SEU LOGIN</h1>
-    <form>
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Digite seu e-mail" required />
 
-      <label for="senha">Senha</label>
-      <input type="password" id="senha" placeholder="Digite sua senha" required />
+  <form method="POST" action="{{ route('login.submit') }}">
+    @csrf
 
-      <a href="cadastro.html" class="cadastro-link">AINDA NÃO TEM CONTA, CADASTRE-SE JÁ</a>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required />
 
-      <a href="/Dashboard.html" class="button-link">CONTINUAR</a>
-    </form>
+    <label for="password">Senha</label>
+    <input type="password" name="password" id="password" placeholder="Digite sua senha" required />
+
+    <a href="{{ route('cadastro') }}" class="cadastro-link">AINDA NÃO TEM CONTA, CADASTRE-SE JÁ</a>
+
+    <button type="submit">CONTINUAR</button>
+  </form> 
+
   </div>
   <div class="imagem">
-    <img src="/img/Login.png" alt="Ilustração Login" />
+    <img src="{{ asset('images/Login.png') }}" alt="Descrição da imagem">
   </div>
 </body>
 </html>
