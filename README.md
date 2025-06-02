@@ -148,12 +148,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ---
 
-## Estrutura do Projeto 
-
-![](https://media.discordapp.net/attachments/1360378760058376202/1364377870142537788/Captura_de_tela_2025-04-22_201016.png?ex=68097369&is=680821e9&hm=a76181501674ed1b201e3f64f6b800f5dd30c2b0cfcf465a9801440e57e1e817&=&format=webp&quality=lossless&width=1068&height=813)
-
----
-
 ## Equipe de Desenvolvimento 
 
  ``Christian Arruda Silva da Hora``, <br>RA:2356889 - Desenvolvedor Front-End, Testador.<br>
