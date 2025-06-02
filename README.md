@@ -66,8 +66,8 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 
-# Projeto FMU 
-# Simulador Financeiro
+# **FMU**
+# ``Simulador Financeiro``
 
 **Simulador Financeiro** é um website desenvolvido em ``HTML``, ``CSS`` e ``JavaScript`` com Banco de Dados ``MySQL``, que permite aos usuários realizar simulações de investimentos de forma simples, visual e interativa. Os dados podem ser armazenados em um banco de dados para fins de histórico e análise futura.
 
