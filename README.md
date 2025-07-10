@@ -1,11 +1,4 @@
-# Simulador Financeiro
-## Equipe de Desenvolvimento 
-
- ``Christian Arruda Silva da Hora``, <br>RA:2356889 - Desenvolvedor Front-End, Testador.<br>
-  ``Inacio Barboza de Lima``<br> RA:2587078 - Desenvolvedor Front-End, Testador. <br>
-  ``Jessica Souza do Nascimento``, <br> RA:2393505 - Analista de Requisitos, Testador.<br> 
- ``Júlia Martins de Toledo``, <br>RA:2407220 - Designer de Website, Testador. <br>
-
+# Login & Register
 ---
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
