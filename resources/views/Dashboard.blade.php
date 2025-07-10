@@ -221,10 +221,5 @@
     </tbody>
   </table>
 
-  <script>
-    function confirmDelete() {
-      return confirm('Tem certeza que deseja excluir esta simulação? Essa ação não pode ser desfeita.');
-    }
-  </script>
 </body>
 </html>
