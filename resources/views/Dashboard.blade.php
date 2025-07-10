@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard</title>
   <style>
-    * {
+      * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -90,31 +90,6 @@
       color: #333;
     }
 
-    .profile-container {
-      position: relative;
-      display: inline-block;
-    }
-
-    .profile-info {
-      display: none;
-      position: absolute;
-      top: 140%;
-      right: 0;
-      background-color: white;
-      color: #1c0033;
-      padding: 0.8rem 1rem;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.2);
-      font-size: 0.9rem;
-      white-space: nowrap;
-      z-index: 10;
-    }
-
-    .profile-container:hover .profile-info {
-      display: block;
-    }
-
-
     th, td {
       padding: 1rem;
       text-align: left;
@@ -125,48 +100,14 @@
       background-color: #eaeaea;
     }
 
-    .options {
-      cursor: pointer;
-      font-size: 1.5rem;
-      position: relative;
-    }
-
-    .crud-menu {
-      display: none;
-      position: absolute;
-      top: 30px;
-      right: 0;
-      background-color: white;
-      color: #1c0033;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.3);
-      z-index: 100;
-    }
-
-    .crud-menu button {
-      display: block;
+    .action-button {
       padding: 0.5rem 1rem;
-      width: 100%;
-      background: none;
       border: none;
-      text-align: left;
+      border-radius: 5px;
+      font-weight: 500;
       cursor: pointer;
       font-size: 0.9rem;
-    }
-
-    .crud-menu button:hover {
-      background-color: #eee;
-    }
-
-    .action-button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    font-weight: 500;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.3s;
+      transition: background-color 0.3s;
     }
 
     .edit-button {
@@ -237,9 +178,7 @@
     .logout-button:hover {
       background-color: #c82333;
     }
-
-
-  </style>
+</style>
 </head>
 <body>
   @if(session('success'))
@@ -276,35 +215,11 @@
       </tr>
     </thead>
     <tbody id="table-body">
-      @forelse($simulacoes as $simulacao)
         <tr>
-          <td>{{ \Carbon\Carbon::parse($simulacao->created_at)->format('d/m/y') }}</td>
-          <td>{{ \Carbon\Carbon::parse($simulacao->created_at)->format('H:i') }}hs</td>
-          <td>{{ $simulacao->renda->tipo ?? 'N/A' }}</td>
-          <td>R$ {{ number_format($simulacao->renda->valor ?? 0, 2, ',', '.') }}</td>
-          <td>R$ {{ number_format($simulacao->valor_final ?? 0, 2, ',', '.') }}</td>
-          <td class="action-cell">
-            <a href="{{ route('simulacao.editar', $simulacao->id) }}" class="action-button edit-button">Editar</a>
-
-            <form method="POST" action="{{ route('simulacao.destroy', $simulacao->id) }}" class="delete-form" onsubmit="return confirmDelete()">
-              @csrf
-              @method('DELETE')
-              <button type="submit" class="action-button delete-button">Excluir</button>
-            </form>
-          </td>
+          <td colspan="6" style="text-align: center;">Nenhuma simulação dinâmica cadastrada.</td>
         </tr>
-      @empty
-        <tr>
-          <td colspan="6" style="text-align: center;">Nenhuma simulação encontrada.</td>
-        </tr>
-      @endforelse
     </tbody>
   </table>
 
-  <script>
-    function confirmDelete() {
-      return confirm('Tem certeza que deseja excluir esta simulação? Essa ação não pode ser desfeita.');
-    }
-  </script>
 </body>
 </html>
